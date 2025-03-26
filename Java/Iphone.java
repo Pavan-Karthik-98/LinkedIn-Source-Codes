@@ -1,25 +1,22 @@
-class IPhone {
-    String model;
-    double price;
+class IPhone {  
+    // Properties (attributes)  
+    String model;  
+    double price;  
+    String color;  
 
-    // Default constructor (auto-added if none exists)
-    // public IPhone() { } 
+    // Constructor (initializes the object)  
+    public IPhone(String model, double price, String color) {  
+        this.model = model;  
+        this.price = price;  
+        this.color = color;  
+    }  
 
-    // Parameterized constructor
-    public IPhone(String model, double price) {
-        this.model = model;
-        this.price = price;
-    }
+    // Method (behavior)  
+    void displayInfo() {  
+        System.out.println("iPhone " + model + " | Price: $" + price + " | Color: " + color);  
+    }  
+}  
 
-    void displayInfo() {
-        System.out.println("Model: " + model + ", Price: $" + price);
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        // Using parameterized constructor
-        IPhone myPhone = new IPhone("15 Pro", 999);
-        myPhone.displayInfo();
-    }
-}
+// Creating an object (instance of the class)  
+IPhone myPhone = new IPhone("15 Pro", 999.99, "Titanium Black");  
+myPhone.displayInfo();  
