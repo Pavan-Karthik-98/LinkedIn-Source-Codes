@@ -1,4 +1,3 @@
-package com.unt.spring_boot_rest;
 
 // Static variables
 class Employee {
